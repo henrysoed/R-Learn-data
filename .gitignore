@@ -1,0 +1,32 @@
+# R specific
+.RData
+.Rhistory
+.Rproj.user
+*.Rproj
+
+# Data files (uncomment if you don't want to track data)
+# data/raw/*
+# !data/raw/.gitkeep
+
+# Output files - keep plots and reports in repo for portfolio
+# Uncomment these lines if you don't want to track outputs
+# outputs/plots/*.png
+# outputs/plots/*.pdf  
+# outputs/reports/*.html
+# outputs/reports/*.pdf
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+
+# Package related
+packrat/lib*/
+packrat/src/

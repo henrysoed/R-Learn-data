@@ -1,0 +1,75 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run R Setup Script",
+			"type": "shell",
+			"command": "Rscript",
+			"args": [
+				"scripts/00_setup.R"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Run Data Import",
+			"type": "shell",
+			"command": "Rscript",
+			"args": [
+				"scripts/01_data_import.R"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Run Data Cleaning",
+			"type": "shell",
+			"command": "Rscript",
+			"args": [
+				"scripts/02_data_cleaning.R"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Run Data Analysis",
+			"type": "shell",
+			"command": "Rscript",
+			"args": [
+				"scripts/03_data_analysis.R"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Run Visualization",
+			"type": "shell",
+			"command": "Rscript",
+			"args": [
+				"scripts/04_visualization.R"
+			],
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Run Complete Analysis Pipeline",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"Run R Setup Script",
+				"Run Data Import",
+				"Run Data Cleaning",
+				"Run Data Analysis",
+				"Run Visualization"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
